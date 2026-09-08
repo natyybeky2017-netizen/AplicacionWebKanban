@@ -19,26 +19,20 @@
          1. CABEÇALHO DA APLICAÇÃO (Main Header)
     ==================================================== -->
     <header class="main-header">
+
         <div class="header-left">
-        <span class="material-symbols-outlined">menu</span>
-            <!-- Coloque aqui o Logo e o título (Tablo / Boards) -->
-           <img src="logo-tablo.png" alt="Logo" class="logo">
+        <button><span class="material-symbols-outlined">menu</span></button>
+           <img src="img/logo-tablo.png" alt="Logo de la aplicación" class="logo">
             <h1 class="app-title">Tablo</h1>
-            <h1>Boards</h1>
-        </div>
+           </div>
 
-        <div class="header-search">
-            <!-- Coloque aqui o input de busca e o ícone de lupa -->
-             <input class="w-full h-9 pl-9 pr-8 rounded bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-all" id="kanban-search-input" placeholder="Filtrar tareas por título o etiqueta..." type="text">
-             <span class="material-symbols-outlined">search</span>
-        </div>
+            <div class="header-right">
+            <button><span class="material-symbols-outlined">notifications_active</span></button>
+            <button><span class="material-symbols-outlined">person</span></button>
+             </div>
 
-        <div class="header-right">
-            <!-- Coloque aqui os ícones de notificação e avatar do usuário -->
-             <span class="material-symbols-outlined">notifications_active</span>
-             <span class="material-symbols-outlined">person</span>
-             
-        </div>
+
+    
     </header>
 
 
@@ -51,11 +45,9 @@
         <section class="board-header">
             <div class="board-title-area">
                 <!-- Coloque aqui o título "Sprint 24 - Core Engine" e o subtítulo -->
-                 <h2>Proyecto: Core Engine</h2>
+                 <h2>Proyecto</h2>
             </div>
-            <!-- Coloque aqui o botão de "+ Nueva Tarea" -->
-             <span class="material-symbols-outlined">add</span>
-             
+            
         </section>
 
         <!-- B. Barra de Filtros e Contadores rápidos -->
@@ -66,14 +58,9 @@
                  <h2>En Proceso </h2>
                  <h2>Finalizado </h2>
             </div>
-            <!-- Coloque aqui o campo "Filtrar tareas por título o etiqueta..." -->
-             <input 
-        type="text" 
-        id="filter-input" 
-        placeholder="Filtrar tareas por título o etiqueta..."
-        aria-label="Filtrar tarefas por título ou etiqueta"
-    >
-        </section>
+            <div class="filter-controls">
+                <input type="text" id="kanban-search-input" class="search-input" placeholder="Filtrar tareas por título o etiqueta...">
+              </div>
 
         <!-- C. O QUADRO KANBAN (As 3 colunas) -->
         <section class="kanban-board">
@@ -83,7 +70,7 @@
                 <div class="column-header">
                     <!-- Coloque o título "Por Hacer (3)" e o botão "+" -->
                      <h2>Por Hacer </h2>
-                     <span class="material-symbols-outlined">add</span>
+                    <button><span class="material-symbols-outlined">add</span></button>
 
                 </div>
                 
@@ -94,7 +81,7 @@
                     <article class="task-card" draggable="true">
                         <div class="card-tag-row">
                             <!-- Coloque aqui a ID (ex: KF-101) e a tag de Prioridade -->
-                             <span class="task-id">Duckstore</span>
+                             <span class="task-id">Proyecto</span>
                              <span class="priority-tag tag-alta">Alta</span>
                         </div>
                         <!-- Coloque aqui o Título da tarefa (Diseñar wireframes...) -->
@@ -103,10 +90,10 @@
                         <p class="task-description">Optimizar el flujo móvil para mejorar la experiencia del usuario en dispositivos de pantalla pequeña.</p>
                         <div class="card-footer-row">
                             <!-- Coloque aqui o ícone de calendário e a data -->
-                             <span class="material-symbols-outlined">calendar_month</span>
+                             <button><span class="material-symbols-outlined">calendar_month</span></button>
                              <p class="task-date">2026-09-15</p>
                             <!-- Coloque aqui o ícone de balão e o contador de comentários -->
-                             <span class="material-symbols-outlined">chat_bubble</span>
+                             <button><span class="material-symbols-outlined">chat_bubble</span></button>
                              <p class="comment-count">5</p>
                         </div>
                     </article>
@@ -120,7 +107,7 @@
                 <div class="column-header">
                     <!-- Coloque o título "En Proceso (2)" e o botão "+" -->
                      <h2>En Proceso </h2>
-                     <span class="material-symbols-outlined">add</span>
+                     <button><span class="material-symbols-outlined">add</span></button>
                 </div>
                 <div class="task-list" id="doing-tasks">
                     <!-- Os cards desta coluna virão aqui dinamicamente -->
@@ -132,7 +119,7 @@
                 <div class="column-header">
                     <!-- Coloque o título "Finalizado (2)" e o botão "+" -->
                         <h2>Finalizado </h2>
-                        <span class="material-symbols-outlined">add</span>  
+                        <button><span class="material-symbols-outlined">add</span></button>
                 </div>
                 <div class="task-list" id="done-tasks">
                     <!-- Os cards desta coluna virão aqui dinamicamente -->
@@ -148,10 +135,10 @@
     ==================================================== -->
     <footer class="mobile-footer">
         <!-- Coloque aqui os 4 ícones de navegação: Boards, Backlog, Activity, Settings -->
-         <span class="material-symbols-outlined">view_kanban</span>
-         <span class="material-symbols-outlined">format_list_bulleted</span>
-         <span class="material-symbols-outlined">pulse_alert</span>
-         <span class="material-symbols-outlined">settings</span>
+         <button><span class="material-symbols-outlined">view_kanban</span></button>
+         <button><span class="material-symbols-outlined">format_list_bulleted</span></button>
+         <button><span class="material-symbols-outlined">pulse_alert</span></button>
+         <button><span class="material-symbols-outlined">settings</span></button>
 
     </footer>
 
