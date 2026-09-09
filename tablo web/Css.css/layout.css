@@ -1,0 +1,109 @@
+.main-header {
+    background-color: var(--bg-header);
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.app-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.main-header button {
+    background-color:transparent;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 8px 14px;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+.main-header button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.board-container {
+    padding: 1.5rem 2rem; 
+}
+.board-header {
+    margin-bottom: 1rem;
+}
+.board-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.board-filters {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quick-stats {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-item h2 {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-todo { background-color: var(--tag-high); }
+.dot-doing { background-color: var(--tag-medium); }
+.dot-done { background-color: var(--tag-low); }
+
+.kanban-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px 20px;
+}
+
+.kanban-column {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    padding: 16px;
+    min-height: 500px;
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}

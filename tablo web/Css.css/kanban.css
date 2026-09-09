@@ -1,0 +1,62 @@
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-card {
+    background-color: var(--bg-header);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 14px;
+    cursor: grab;
+}
+
+.card-tag-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.task-title {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.task-description {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.card-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.search-input {
+    background-color: var(--bg-input); 
+    color: var(--text-primary);       
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px 16px;               
+    width: 280px;                        
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.search-input::placeholder {
+    color: var(--text-secondary);
+}
+.search-input:focus {
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 0 2px rgba(242, 101, 34, 0.2);
+}

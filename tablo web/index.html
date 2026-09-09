@@ -1,296 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<!DOCTYPE html>
-<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablo</title>
-   <link rel="stylesheet" href="styles.css">
-  <link rel="db.json" href="db.json">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
-
+    <link rel="stylesheet" href="Css.css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <body>
 
-    <!-- ===================================================
-         1. CABEÇALHO DA APLICAÇÃO (Main Header)
-    ==================================================== -->
     <header class="main-header">
-
         <div class="header-left">
-        <button><span class="material-symbols-outlined">menu</span></button>
-           <img src="img/logo-tablo.png" alt="Logo de la aplicación" class="logo">
+            <button><span class="material-symbols-outlined">menu</span></button>
+            <img src="img/logo-tablo.png" alt="Logo de la aplicación" class="logo">
             <h1 class="app-title">Tablo</h1>
-           </div>
+        </div>
 
-            <div class="header-right">
+        <div class="header-right">
             <button><span class="material-symbols-outlined">notifications_active</span></button>
             <button><span class="material-symbols-outlined">person</span></button>
-             </div>
-
-
-    
+        </div>
     </header>
 
-
-    <!-- ===================================================
-         2. CONTEÚDO PRINCIPAL (Board Area)
-    ==================================================== -->
     <main class="board-container">
-
-        <!-- A. Título do Sprint e Botão 'Nova Tarefa' -->
         <section class="board-header">
             <div class="board-title-area">
-                <!-- Coloque aqui o título "Sprint 24 - Core Engine" e o subtítulo -->
-                 <h2>Proyecto</h2>
+                <h2>Proyecto</h2>
             </div>
-            
         </section>
 
-        <!-- B. Barra de Filtros e Contadores rápidos -->
         <section class="board-filters">
             <div class="quick-stats">
-                <!-- Coloque aqui as etiquetas "Por Hacer 3", "En Proceso 2", etc. -->
-                 <h2>Por Hacer </h2>
-                 <h2>En Proceso </h2>
-                 <h2>Finalizado </h2>
+                <div class="stat-item">
+                    <span class="status-dot dot-todo"></span>
+                    <h2>Por Hacer</h2>
+                </div>
+                <div class="stat-item">
+                    <span class="status-dot dot-doing"></span>
+                    <h2>En Proceso</h2>
+                </div>
+                <div class="stat-item">
+                    <span class="status-dot dot-done"></span>
+                    <h2>Finalizado</h2>
+                </div>
             </div>
+
             <div class="filter-controls">
                 <input type="text" id="kanban-search-input" class="search-input" placeholder="Filtrar tareas por título o etiqueta...">
-              </div>
+                <button><span class="material-symbols-outlined">filter_list</span></button>
+            </div>
+        </section>
 
-        <!-- C. O QUADRO KANBAN (As 3 colunas) -->
         <section class="kanban-board">
-
-            <!-- COLUNA 1: Por Hacer (todo) -->
             <div class="kanban-column" id="todo-column">
                 <div class="column-header">
-                    <!-- Coloque o título "Por Hacer (3)" e o botão "+" -->
-                     <h2>Por Hacer </h2>
+                    <h2>Por Hacer</h2>
                     <button><span class="material-symbols-outlined">add</span></button>
-
                 </div>
                 
-                <!-- CONTAINER ONDE OS CARDS VÃO FICAR (SortableJS vai aqui) -->
                 <div class="task-list" id="todo-tasks">
-                    
-                    <!-- ESQUELETO DE UM CARD DE TAREFA (Repita este bloco para cada card) -->
                     <article class="task-card" draggable="true">
                         <div class="card-tag-row">
-                            <!-- Coloque aqui a ID (ex: KF-101) e a tag de Prioridade -->
-                             <span class="task-id">Proyecto</span>
-                             <span class="priority-tag tag-alta">Alta</span>
+                            <span class="task-id">Proyecto</span>
+                            <span class="priority-tag tag-alta">Alta</span>
                         </div>
-                        <!-- Coloque aqui o Título da tarefa (Diseñar wireframes...) -->
-                         <h3 class="task-title">Diseñar wireframes para la nueva funcionalidad de búsqueda avanzada</h3>
-                        <!-- Coloque aqui a Descrição da tarefa (Optimizar flujo móvil...) -->
-                        <p class="task-description">Optimizar el flujo móvil para mejorar la experiencia del usuario en dispositivos de pantalla pequeña.</p>
+                        
+                        <div>
+                            <h3 class="task-title">Diseñar wireframes para la nueva funcionalidad de búsqueda avanzada</h3>
+                            <p class="task-description">Optimizar el flujo móvil para mejorar la experiencia del usuario en dispositivos de pantalla pequeña.</p>
+                        </div>
+
                         <div class="card-footer-row">
-                            <!-- Coloque aqui o ícone de calendário e a data -->
-                             <button><span class="material-symbols-outlined">calendar_month</span></button>
-                             <p class="task-date">2026-09-15</p>
-                            <!-- Coloque aqui o ícone de balão e o contador de comentários -->
-                             <button><span class="material-symbols-outlined">chat_bubble</span></button>
-                             <p class="comment-count">5</p>
+                            <button><span class="material-symbols-outlined">calendar_month</span></button>
+                            <p class="task-date">2026-09-15</p>
+                            <button><span class="material-symbols-outlined">chat_bubble</span></button>
+                            <p class="comment-count">5</p>
                         </div>
                     </article>
-                    <!-- FIM DO ESQUELETO DO CARD -->
-
                 </div>
             </div>
 
-            <!-- COLUNA 2: En Proceso (doing) -->
             <div class="kanban-column" id="doing-column">
                 <div class="column-header">
-                    <!-- Coloque o título "En Proceso (2)" e o botão "+" -->
-                     <h2>En Proceso </h2>
-                     <button><span class="material-symbols-outlined">add</span></button>
+                    <h2>En Proceso</h2>
+                    <button><span class="material-symbols-outlined">add</span></button>
                 </div>
-                <div class="task-list" id="doing-tasks">
-                    <!-- Os cards desta coluna virão aqui dinamicamente -->
-                </div>
+                <div class="task-list" id="doing-tasks"></div>
             </div>
 
-            <!-- COLUNA 3: Finalizado (done) -->
             <div class="kanban-column" id="done-column">
                 <div class="column-header">
-                    <!-- Coloque o título "Finalizado (2)" e o botão "+" -->
-                        <h2>Finalizado </h2>
-                        <button><span class="material-symbols-outlined">add</span></button>
+                    <h2>Finalizado</h2>
+                    <button><span class="material-symbols-outlined">add</span></button>
                 </div>
-                <div class="task-list" id="done-tasks">
-                    <!-- Os cards desta coluna virão aqui dinamicamente -->
-                </div>
+                <div class="task-list" id="done-tasks"></div>
             </div>
-
         </section>
     </main>
 
-
-    <!-- ===================================================
-         3. RODAPÉ MOBILE (Mobile Navigation)
-    ==================================================== -->
     <footer class="mobile-footer">
-        <!-- Coloque aqui os 4 ícones de navegação: Boards, Backlog, Activity, Settings -->
-         <button><span class="material-symbols-outlined">view_kanban</span></button>
-         <button><span class="material-symbols-outlined">format_list_bulleted</span></button>
-         <button><span class="material-symbols-outlined">pulse_alert</span></button>
-         <button><span class="material-symbols-outlined">settings</span></button>
-
+        <button><span class="material-symbols-outlined">view_kanban</span></button>
+        <button><span class="material-symbols-outlined">format_list_bulleted</span></button>
+        <button><span class="material-symbols-outlined">pulse_alert</span></button>
+        <button><span class="material-symbols-outlined">settings</span></button>
     </footer>
 
-
-    <!-- ===================================================
-         4. MODAIS (Janelas sobrepostas, ocultas por padrão)
-    ==================================================== -->
-    
-    <!-- Modal para Criar/Editar Tarefa -->
+    <!-- MODAL 1: Crear/Editar Tarea -->
     <div class="modal" id="task-form-modal" style="display: none;">
         <div class="modal-content">
-            <!-- Crie aqui o formulário com: Título, Descrição, Prioridade, Data e botão Salvar -->
-             <h2 class="modal-title">Crear/Editar Tarea</h2>
-             <button class="close-btn" 
-             aria-label="Cerrar modal"> x </button>
-             <!-- Formulário de Entrada -->
-        <form id="task-form">
+            <h2 class="modal-title">Crear/Editar Tarea</h2>
+            <button class="close-btn" aria-label="Cerrar modal">&times;</button>
             
-            <!-- Campo de Título -->
-            <div class="form-group">
-                <label for="task-title-input">Título de la tarea</label>
-                <input 
-                    type="text" 
-                    id="task-title-input" 
-                    name="title" 
-                    placeholder="Ej: Diseñar wireframes" 
-                    required
-                >
-            </div>
-
-            <!-- Campo de Descrição -->
-            <div class="form-group">
-                <label for="task-desc-input">Descripción</label>
-                <textarea 
-                    id="task-desc-input" 
-                    name="description" 
-                    rows="3" 
-                    placeholder="Añade los detalles o requisitos..."
-                ></textarea>
-            </div>
-
-            <!-- Linha Dupla: Prioridade e Status -->
-            <div class="form-row">
-                
-                <!-- Seleção de Prioridade -->
+            <form id="task-form">
                 <div class="form-group">
-                    <label for="task-priority-select">Prioridad</label>
-                    <select id="task-priority-select" name="priority">
-                        <option value="Alta">Alta 🔴</option>
-                        <option value="Media" selected>Media 🟡</option>
-                        <option value="Baja">Baja 🟢</option>
-                    </select>
+                    <label for="task-title-input">Título de la tarea</label>
+                    <input type="text" id="task-title-input" name="title" placeholder="Ej: Diseñar wireframes" required>
                 </div>
 
-                <!-- Seleção de Status/Coluna -->
                 <div class="form-group">
-                    <label for="task-status-select">Estado</label>
-                    <select id="task-status-select" name="status">
-                        <option value="todo">Por Hacer</option>
-                        <option value="doing">En Proceso</option>
-                        <option value="done">Finalizado</option>
-                    </select>
+                    <label for="task-desc-input">Descripción</label>
+                    <textarea id="task-desc-input" name="description" rows="3" placeholder="Añade los detalles o requisitos..."></textarea>
                 </div>
 
-            </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="task-priority-select">Prioridad</label>
+                        <select id="task-priority-select" name="priority">
+                            <option value="Alta">Alta 🔴</option>
+                            <option value="Media" selected>Media 🟡</option>
+                            <option value="Baja">Baja 🟢</option>
+                        </select>
+                    </div>
 
-            <!-- Campo de Data -->
-            <div class="form-group">
-                <label for="task-date-input">Fecha límite</label>
-                <input type="date" id="task-date-input" name="dueDate">
-            </div>
+                    <div class="form-group">
+                        <label for="task-status-select">Estado</label>
+                        <select id="task-status-select" name="status">
+                            <option value="todo">Por Hacer</option>
+                            <option value="doing">En Proceso</option>
+                            <option value="done">Finalizado</option>
+                        </select>
+                    </div>
+                </div> <!-- Se añade cierre de form-row -->
 
-            <!-- Rodapé com Botões de Ação -->
-            <div class="modal-actions">
-                <button type="button" class="btn-secondary" id="cancel-form-btn">Cancelar</button>
-                <button type="submit" class="btn-primary">Guardar Tarea</button>
-            </div>
+                <div class="form-group">
+                    <label for="task-date-input">Fecha límite</label>
+                    <input type="date" id="task-date-input" name="dueDate">
+                </div>
 
-        </form>
-
-    </div>
-</div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancel-form-btn">Cancelar</button>
+                    <button type="submit" class="btn-primary">Guardar Tarea</button>
+                </div>
+            </form>
         </div>
     </div>
 
-    <!-- Modal para Detalhes da Tarefa e Comentários -->
+    <!-- MODAL 2: Detalle y Comentarios -->
     <div class="modal" id="task-detail-modal" style="display: none;">
         <div class="modal-content">
-            <!-- Crie aqui a visualização detalhada da tarefa e a seção de comentários -->
-        <div class="modal" id="task-detail-modal" style="display: none;">
-    <div class="modal-content">
-        
-        <!-- Cabeçalho do Detalhe -->
-        <div class="modal-header">
-            <div class="detail-tags">
-                <span class="task-id" id="detail-task-id">KF-101</span>
-                <span class="priority-tag tag-alta" id="detail-task-priority">Alta</span>
+            <div class="modal-header">
+                <div class="detail-tags">
+                    <span class="task-id" id="detail-task-id">KF-101</span>
+                    <span class="priority-tag tag-alta" id="detail-task-priority">Alta</span>
+                </div>
+                <button class="close-btn" aria-label="Cerrar modal">&times;</button>
             </div>
-            <button class="close-btn" aria-label="Cerrar modal">&times;</button>
-        </div>
 
-        <!-- Corpo com Título e Descrição Completa -->
-        <div class="detail-body">
-            <h2 id="detail-task-title">Diseñar wireframes responsivos del checkout</h2>
-            <p id="detail-task-desc">
-                Optimizar flujo móvil con visualización de pasarela de pago y micro-animaciones.
-            </p>
-            <div class="detail-meta">
-                <span>📅 Fecha límite: <time id="detail-task-date">2025-04-10</time></span>
+            <div class="detail-body">
+                <h2 id="detail-task-title">Diseñar wireframes responsivos del checkout</h2>
+                <p id="detail-task-desc">
+                    Optimizar flujo móvil con visualización de pasarela de pago y micro-animaciones.
+                </p>
+                <div class="detail-meta">
+                    <span>📅 Fecha límite: <time id="detail-task-date">2025-04-10</time></span>
+                </div>
             </div>
-        </div>
 
-        <hr>
+            <hr>
 
-        <!-- Seção de Comentários -->
-        <div class="comments-section">
-            <h3>Comentarios (<span id="comments-count">1</span>)</h3>
+            <div class="comments-section">
+                <h3>Comentarios (<span id="comments-count">1</span>)</h3>
 
-            <!-- Lista de Comentários Existentes -->
-            <div class="comments-list" id="comments-list">
-                
-                <!-- Exemplo de Comentário Fictício -->
-                <div class="comment-item">
-                    <div class="comment-header">
-                        <strong>Rubén García</strong>
-                        <span class="comment-date">2025-04-09 10:30</span>
+                <div class="comments-list" id="comments-list">
+                    <div class="comment-item">
+                        <div class="comment-header">
+                            <strong>Rubén García</strong>
+                            <span class="comment-date">2025-04-09 10:30</span>
+                        </div>
+                        <p class="comment-text">Falta definir las vistas para la pantalla de confirmación.</p>
                     </div>
-                    <p class="comment-text">Falta definir las vistas para la pantalla de confirmación.</p>
                 </div>
 
+                <form id="add-comment-form">
+                    <textarea id="new-comment-input" placeholder="Escribe un comentario..." rows="2" required></textarea>
+                    <button type="submit" class="btn-primary btn-sm">Comentar</button>
+                </form> <!-- Se añade cierre de formulario -->
             </div>
+        </div> <!-- Se añade cierre de modal-content -->
+    </div> <!-- Se añade cierre de modal -->
 
-            <!-- Formulário para Criar Novo Comentário -->
-            <form id="add-comment-form">
-                <textarea 
-                    id="new-comment-input" 
-                    placeholder="Escribe un comentario..." 
-                    rows="2" 
-                    required
-                ></textarea>
-                <button type="submit" class="btn-primary btn-sm">Comentar</button>
-            </form>
-
-        </div>
-
-    </div>
-</div>
-        </div>
-    </div>
-
-    <!-- Inclua seu arquivo JavaScript aqui no final -->
-     <link rel = script href = "script.js"> 
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+/* ===================================================
+   IMPORTAÇÃO DOS OUTROS ARQUIVOS CSS
+==================================================== */
+@import url('layout.css');
+@import url('kanban.css');
+@import url('modal.css');
+
+
+:root {
+    --bg-main: #121316;
+    --bg-header: #1a1c23;
+    --bg-card: #20232b;
+    --bg-input: #181a20;
+    --border-color: #2a2d37;
+    
+    --text-primary: #f0f2f5;
+    --text-secondary: #9aa0a6;
+    
+    --accent-orange: #f26522;
+    --tag-high: #e53935;   /* Vermelho */
+    --tag-medium: #fb8c00; /* Amarelo/Laranja */
+    --tag-low: #43a047;    /* Verde */
+    
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
