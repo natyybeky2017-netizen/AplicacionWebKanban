@@ -87,7 +87,8 @@
 .dot-done { background-color: var(--tag-low); }
 
 .kanban-board {
-    display: grid;
+    display: flex;
+    align-items: flex-start;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 0 20px 20px;
@@ -98,6 +99,10 @@
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     padding: 16px;
+    flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
     min-height: 500px;
 }
 

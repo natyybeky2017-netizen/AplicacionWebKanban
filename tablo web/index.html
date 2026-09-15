@@ -46,9 +46,13 @@
             </div>
 
             <div class="filter-controls">
+
+            <div class="board-actions" style="margin-bottom: 20px;">
+    <button type="button" id="add-column-btn" style="...">+ Añadir nueva columna</button></div>
                 <input type="text" id="kanban-search-input" class="search-input" placeholder="Filtrar tareas por título o etiqueta...">
                 <button><span class="material-symbols-outlined">filter_list</span></button>
             </div>
+          
         </section>
 
         <section class="kanban-board">
@@ -57,54 +61,23 @@
                     <h2>Por Hacer</h2>
                     <button><span class="material-symbols-outlined">add</span></button>
                 </div>
-                
-                <div class="task-list" id="todo-tasks">
-                    <article class="task-card" draggable="true">
-                        <div class="card-tag-row">
-                            <span class="task-id">Proyecto</span>
-                            <span class="priority-tag tag-alta">Alta</span>
-                        </div>
-                        
-                        <div>
-                            <h3 class="task-title">Diseñar wireframes para la nueva funcionalidad de búsqueda avanzada</h3>
-                            <p class="task-description">Optimizar el flujo móvil para mejorar la experiencia del usuario en dispositivos de pantalla pequeña.</p>
-                        </div>
-
-                        <div class="card-footer-row">
-                            <button><span class="material-symbols-outlined">calendar_month</span></button>
-                            <p class="task-date">2026-09-15</p>
-                            <button><span class="material-symbols-outlined">chat_bubble</span></button>
-                            <p class="comment-count">5</p>
-                        </div>
-                    </article>
-                </div>
+                <div class="task-list" id="todo-tasks"></div> 
             </div>
-
-            <div class="kanban-column" id="doing-column">
+             <div class="kanban-column" id="doing-column">
                 <div class="column-header">
                     <h2>En Proceso</h2>
                     <button><span class="material-symbols-outlined">add</span></button>
                 </div>
                 <div class="task-list" id="doing-tasks"></div>
             </div>
-
-            <div class="kanban-column" id="done-column">
+                 <div class="kanban-column" id="done-column">
                 <div class="column-header">
                     <h2>Finalizado</h2>
                     <button><span class="material-symbols-outlined">add</span></button>
                 </div>
-                <div class="task-list" id="done-tasks"></div>
             </div>
         </section>
     </main>
-
-    <footer class="mobile-footer">
-        <button><span class="material-symbols-outlined">view_kanban</span></button>
-        <button><span class="material-symbols-outlined">format_list_bulleted</span></button>
-        <button><span class="material-symbols-outlined">pulse_alert</span></button>
-        <button><span class="material-symbols-outlined">settings</span></button>
-    </footer>
-
     <!-- MODAL 1: Crear/Editar Tarea -->
     <div class="modal" id="task-form-modal" style="display: none;">
         <div class="modal-content">
@@ -140,7 +113,7 @@
                             <option value="done">Finalizado</option>
                         </select>
                     </div>
-                </div> <!-- Se añade cierre de form-row -->
+                </div> 
 
                 <div class="form-group">
                     <label for="task-date-input">Fecha límite</label>
@@ -155,7 +128,7 @@
         </div>
     </div>
 
-    <!-- MODAL 2: Detalle y Comentarios -->
+    
     <div class="modal" id="task-detail-modal" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
@@ -172,7 +145,7 @@
                     Optimizar flujo móvil con visualización de pasarela de pago y micro-animaciones.
                 </p>
                 <div class="detail-meta">
-                    <span>📅 Fecha límite: <time id="detail-task-date">2025-04-10</time></span>
+                <span class="material-symbols-outlined">calendar_month</span>Fecha límite: <time id="detail-task-date">2025-04-10</time></span>
                 </div>
             </div>
 
@@ -184,7 +157,7 @@
                 <div class="comments-list" id="comments-list">
                     <div class="comment-item">
                         <div class="comment-header">
-                            <strong>Rubén García</strong>
+                            <strong>Juan</strong>
                             <span class="comment-date">2025-04-09 10:30</span>
                         </div>
                         <p class="comment-text">Falta definir las vistas para la pantalla de confirmación.</p>
@@ -194,11 +167,11 @@
                 <form id="add-comment-form">
                     <textarea id="new-comment-input" placeholder="Escribe un comentario..." rows="2" required></textarea>
                     <button type="submit" class="btn-primary btn-sm">Comentar</button>
-                </form> <!-- Se añade cierre de formulario -->
+                </form> 
             </div>
-        </div> <!-- Se añade cierre de modal-content -->
-    </div> <!-- Se añade cierre de modal -->
-
-    <script src="script.js"></script>
+        </div> 
+    </div> 
+<script src="script.js"></script>
 </body>
+
 </html>

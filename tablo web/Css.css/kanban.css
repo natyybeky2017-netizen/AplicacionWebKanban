@@ -1,7 +1,8 @@
-.task-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.task-list, [id$="-tasks"] {
+  flex-grow: 1;
+  min-height: 250px; 
+  border-radius: 8px;
+  padding: 8px;
 }
 
 .task-card {
@@ -59,4 +60,15 @@
 .search-input:focus {
     border-color: var(--accent-orange);
     box-shadow: 0 0 0 2px rgba(242, 101, 34, 0.2);
+}
+.task-card.dragging {
+    opacity: 0.4;
+}
+.task-list.drag-over {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px dashed var(--accent-orange);
+    border-radius: var(--border-radius);
+}
+.edit-btn span, .delete-btn span {
+  pointer-events: none;
 }
