@@ -70,6 +70,60 @@
       "dueDate": "",
       "comments": [],
       "id": "bx3pxJv5qK4"
+    },
+    {
+      "id": "7m5qN9Pbj6Y",
+      "status": "todo",
+      "title": "ghjnj",
+      "description": "",
+      "priority": "Media",
+      "dueDate": "2026-09-11",
+      "comments": []
+    },
+    {
+      "id": "6aYImplSXaI",
+      "status": "todo",
+      "title": "proyecto tablero",
+      "description": "tablero kanban",
+      "priority": "Media",
+      "dueDate": "2026-09-15",
+      "comments": []
+    },
+    {
+      "id": "AW-m77TXRX8",
+      "status": "todo",
+      "title": "ghjnj",
+      "description": "",
+      "priority": "Media",
+      "dueDate": "",
+      "comments": []
+    },
+    {
+      "id": "VGCXCrf4ozk",
+      "status": "todo",
+      "title": "nuevo",
+      "description": "header",
+      "priority": "Media",
+      "dueDate": "2026-09-16",
+      "comments": []
+    },
+    {
+      "id": "aST8XXL51gs",
+      "status": "todo",
+      "title": "test 1",
+      "description": "test 1",
+      "priority": "Media",
+      "dueDate": "",
+      "comments": []
+    },
+    {
+      "id": "n8fTq4EWCKI",
+      "status": "todo",
+      "title": "header",
+      "description": "intriducción",
+      "priority": "Media",
+      "dueDate": "2026-09-16",
+      "comments": []
     }
   ],
   "comments": [
